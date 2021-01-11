@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
 import android.content.pm.PackageManager;
+import android.view.WindowManager.LayoutParams;
 
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
   private static PowerManager.WakeLock wakeLock;

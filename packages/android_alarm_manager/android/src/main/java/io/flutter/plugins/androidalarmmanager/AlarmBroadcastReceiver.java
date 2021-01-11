@@ -9,7 +9,7 @@ import android.content.pm.PackageManager;
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
   private static PowerManager.WakeLock wakeLock;
 
-  @override
+  @Override
   public void onReceive(Context context, Intent intent) {
     PowerManager powerManager = (PowerManager)
 context.getSystemService(Context.POWER_SERVICE);

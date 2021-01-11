@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
 import android.content.pm.PackageManager;
-import android.view.WindowManager.LayoutParams;
 
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
   private static PowerManager.WakeLock wakeLock;
@@ -14,7 +13,7 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
   public void onReceive(Context context, Intent intent) {
     PowerManager powerManager = (PowerManager)
 context.getSystemService(Context.POWER_SERVICE);
-    wakeLock = powerManager.newWakeLock(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
+    wakeLock = powerManager.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK |
             PowerManager.ACQUIRE_CAUSES_WAKEUP |
             PowerManager.ON_AFTER_RELEASE, "My wakelock");
 

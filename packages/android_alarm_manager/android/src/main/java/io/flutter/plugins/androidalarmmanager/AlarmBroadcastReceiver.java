@@ -13,7 +13,7 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
   public void onReceive(Context context, Intent intent) {
     PowerManager powerManager = (PowerManager)
 context.getSystemService(Context.POWER_SERVICE);
-    wakeLock = powerManager.newWakeLock(PowerManager.FLAG_KEEP_SCREEN_ON |
+    wakeLock = powerManager.newWakeLock(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON |
             PowerManager.ACQUIRE_CAUSES_WAKEUP |
             PowerManager.ON_AFTER_RELEASE, "My wakelock");
 
